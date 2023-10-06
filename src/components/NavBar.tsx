@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Logo from '../assets/img/saude.png'
 import { useState } from 'react'
 
@@ -20,12 +21,12 @@ const NavBar = () => {
                     {/* Mobile Navbar */}
                     <div className="grid grid-cols-6 gap-x-0 font-oswald md:hidden">
                         <div className='col-span-1 -mr-10'>
-                            <a href="/">
+                            <Link to="/">
                                 <img className="w-12 md:w-96px" src={Logo} alt="logo" />
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-span-3">
-                            <a href="/"><p className='text-3xl font-bold -mx-4 py-3 px-0 md:py-6 md:px-4'>Clinica São Patrício</p></a>
+                            <Link to="/"><p className='text-3xl font-bold -mx-4 py-3 px-0 md:py-6 md:px-4'>Clinica São Patrício</p></Link>
                         </div>
                         
                         <div className="col-start-6 md:hidden text-black text-3xl grid justify-items-end">
@@ -37,13 +38,13 @@ const NavBar = () => {
                             <div className="grid grid-cols-6 col-start-6">
                                 <ul className="font-bold -mx-6">
                                     <li className="text-lg px-4">
-                                        <a onClick={openMenu} href="/sobre"><p>Sobre</p></a>
+                                        <Link onClick={openMenu} to="/sobre"><p>Sobre</p></Link>
                                     </li>
                                     <li className="text-lg px-4">
-                                        <a onClick={openMenu} href="/equipe"><p>Equipe</p></a>
+                                        <Link onClick={openMenu} to="/equipe"><p>Equipe</p></Link>
                                     </li>
                                     <li className="text-lg px-4">
-                                        <a onClick={openMenu} href="/contato"><p>Contato</p></a>
+                                        <Link onClick={openMenu} to="/contato"><p>Contato</p></Link>
                                     </li>
 
                                 </ul>
@@ -55,11 +56,11 @@ const NavBar = () => {
                     <div className="hidden md:grid grid-cols-9 py-4 font-oswald tracking-widest">
                             <div className="col-start-1 col-end-4">
                                 <div className="flex flex-row">
-                                <a href="/">
+                                <Link to="/">
                                     <img className="bg-white w-16" src={Logo} alt="logo" />
-                                </a>
+                                </Link>
                                 <div className="px-4 py-3 text-3xl font-bold">
-                                <a href="/"><p className="text-black font-oswald tracking-wide text2">Clinica São Patrício</p></a>
+                                <Link to="/"><p className="text-black font-oswald traLinkking-wide text2">Clinica São Patrício</p></Link>
                                 </div>
 
                                 </div>
@@ -70,14 +71,14 @@ const NavBar = () => {
                                 <nav className="flex-1">
                                     <ul className="flex flex-row pl-10">
                                         <li className="px-3">
-                                            <a className="hover:underline duration-700 text-xl" href="/sobre"><p>Sobre</p></a>
+                                            <Link className="hover:underline duration-700 text-xl" to="/sobre"><p>Sobre</p></Link>
                                         </li>
                                         <li className="px-3">
-                                            <a className="hover:underline duration-700 text-xl" href="/equipe"><p>Equipe</p></a>
+                                            <Link className="hover:underline duration-700 text-xl" to="/equipe"><p>Equipe</p></Link>
                                         </li>
 
                                         <li className="px-3">
-                                            <a className="hover:underline duration-700 text-xl" href="/contato"><p>Contato</p></a>
+                                            <Link className="hover:underline duration-700 text-xl" to="/contato"><p>Contato</p></Link>
                                         </li>
                                     </ul>
                                 </nav>

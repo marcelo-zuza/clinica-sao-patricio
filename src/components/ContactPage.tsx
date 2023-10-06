@@ -5,7 +5,7 @@ const ContactPage = () => {
         <div className="py-20 md:pt-32 mx-2 md:mx-12 bg-green-100">
             <h1 className="text-6xl py-6 text-center">CONTATO</h1>
             <p className="text-2xl text-center">Fale conosco e agende sua consulta</p>
-            <form className="px-20">
+            <form className="px-4 md:px-20">
                       <div className="py-3">
                         <div className="grid grid-cols-1 py-2">
                           <input className="text-base form-input rounded-xl" type="text" name="name"placeholder="Insira seu nome" />

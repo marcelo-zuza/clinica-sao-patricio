@@ -16,19 +16,19 @@ import ContactPage from "./components/ContactPage"
 const App = () => {
   return (
     <div className="font-monteserrat">
-      <NavBar />
       <div className="mx-6">
         <BrowserRouter>
+            <NavBar />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/equipe" element={<Team />} />
               <Route path="/sobre" element={<AboutPage />} />
               <Route path="/contato" element={<ContactPage />} />
-
             </Routes>
-          </BrowserRouter>
+            <Footer />
+        </BrowserRouter>
       </div>
-      <Footer />
+ 
     </div>
   )
 }
