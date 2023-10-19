@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, ErrorResponse } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 // components
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
@@ -16,15 +16,17 @@ import ContactPage from "./components/ContactPage"
 const App = () => {
   return (
     <div className="font-monteserrat">
-      <div className="mx-6">
+      <div>
         <BrowserRouter>
             <NavBar />
-            <Routes>
-              <Route path="clinica-sao-patricio/" element={<Index />} />
-              <Route path="clinica-sao-patricio/equipe" element={<Team />} />
-              <Route path="clinica-sao-patricio/sobre" element={<AboutPage />} />
-              <Route path="clinica-sao-patricio/contato" element={<ContactPage />} />
-            </Routes>
+              <div className="mx-6">
+                <Routes>
+                <Route path="clinica-sao-patricio/" element={<Index />} />
+                <Route path="clinica-sao-patricio/equipe" element={<Team />} />
+                <Route path="clinica-sao-patricio/sobre" element={<AboutPage />} />
+                <Route path="clinica-sao-patricio/contato" element={<ContactPage />} />
+              </Routes>
+              </div>
             <Footer />
         </BrowserRouter>
       </div>

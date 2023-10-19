@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Logo from '../assets/img/saude.png'
 import { useState } from 'react'
+import ScrollToTop from '../services/ScrollToTop'
 
 const NavBar = () => {
 
@@ -21,12 +22,12 @@ const NavBar = () => {
                     {/* Mobile Navbar */}
                     <div className="grid grid-cols-6 gap-x-0 font-oswald md:hidden">
                         <div className='col-span-1 -mr-10'>
-                            <Link to="clinica-sao-patricio/">
+                            <Link to="clinica-sao-patricio/" onClick={ScrollToTop}>
                                 <img className="w-12 md:w-96px" src={Logo} alt="logo" />
                             </Link>
                         </div>
                         <div className="col-span-3">
-                            <Link to="clinica-sao-patricio/"><p className='text-3xl font-bold -mx-4 py-3 px-0 md:py-6 md:px-4'>Clinica São Patrício</p></Link>
+                            <Link to="clinica-sao-patricio/" onClick={ScrollToTop}><p className='text-3xl font-bold -mx-4 py-3 px-0 md:py-6 md:px-4'>Clinica São Patrício</p></Link>
                         </div>
                         
                         <div className="col-start-6 md:hidden text-black text-3xl grid justify-items-end">
@@ -38,13 +39,13 @@ const NavBar = () => {
                             <div className="grid grid-cols-6 col-start-6">
                                 <ul className="font-bold -mx-6">
                                     <li className="text-lg px-4">
-                                        <Link onClick={openMenu} to="clinica-sao-patricio/sobre"><p>Sobre</p></Link>
+                                        <Link onClick={() => (ScrollToTop(), openMenu())} to="clinica-sao-patricio/sobre"><p>Sobre</p></Link>
                                     </li>
                                     <li className="text-lg px-4">
-                                        <Link onClick={openMenu} to="clinica-sao-patricio/equipe"><p>Equipe</p></Link>
+                                        <Link onClick={() => (ScrollToTop(), openMenu())} to="clinica-sao-patricio/equipe"><p>Equipe</p></Link>
                                     </li>
                                     <li className="text-lg px-4">
-                                        <Link onClick={openMenu} to="clinica-sao-patricio/contato"><p>Contato</p></Link>
+                                        <Link onClick={() => (ScrollToTop(), openMenu())} to="clinica-sao-patricio/contato"><p>Contato</p></Link>
                                     </li>
 
                                 </ul>
@@ -56,11 +57,11 @@ const NavBar = () => {
                     <div className="hidden md:grid grid-cols-9 py-4 font-oswald tracking-widest">
                             <div className="col-start-1 col-end-4">
                                 <div className="flex flex-row">
-                                <Link to="clinica-sao-patricio/">
+                                <Link to="clinica-sao-patricio/" onClick={ScrollToTop}>
                                     <img className="bg-white w-16" src={Logo} alt="logo" />
                                 </Link>
                                 <div className="px-4 py-3 text-3xl font-bold">
-                                <Link to="clinica-sao-patricio/"><p className="text-black font-oswald traLinkking-wide text2">Clinica São Patrício</p></Link>
+                                <Link to="clinica-sao-patricio/" onClick={ScrollToTop}><p className="text-black font-oswald traLinkking-wide text2">Clinica São Patrício</p></Link>
                                 </div>
 
                                 </div>
@@ -71,14 +72,14 @@ const NavBar = () => {
                                 <nav className="flex-1">
                                     <ul className="flex flex-row pl-10">
                                         <li className="px-3">
-                                            <Link className="hover:underline duration-700 text-xl" to="clinica-sao-patricio/sobre"><p>Sobre</p></Link>
+                                            <Link className="hover:underline duration-700 text-xl" to="clinica-sao-patricio/sobre" onClick={ScrollToTop}><p>Sobre</p></Link>
                                         </li>
                                         <li className="px-3">
-                                            <Link className="hover:underline duration-700 text-xl" to="clinica-sao-patricio/equipe"><p>Equipe</p></Link>
+                                            <Link className="hover:underline duration-700 text-xl" to="clinica-sao-patricio/equipe" onClick={ScrollToTop}><p>Equipe</p></Link>
                                         </li>
 
                                         <li className="px-3">
-                                            <Link className="hover:underline duration-700 text-xl" to="clinica-sao-patricio/contato"><p>Contato</p></Link>
+                                            <Link className="hover:underline duration-700 text-xl" to="clinica-sao-patricio/contato" onClick={ScrollToTop}><p>Contato</p></Link>
                                         </li>
                                     </ul>
                                 </nav>
