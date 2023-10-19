@@ -14,7 +14,7 @@ const Footer = () => {
             <p className="text-center py-1 text-2xl font-extrabold">Clinica São Patrício</p>
 
             <div className="flex flex-row justify-center">
-              <Link to="/contato" className="px-2 hover:underline text-center border-r border-black font-bold" onClick={ScrollToTop}>Fale Conosco</Link>
+              <Link to="/clinica-sao-patricio/contato" className="px-2 hover:underline text-center border-r border-black font-bold" onClick={ScrollToTop}>Fale Conosco</Link>
               <a href="#" className="px-2 hover:underline text-center font-bold">Guia Médico</a>
             </div>
 
