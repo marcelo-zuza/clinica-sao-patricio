@@ -15,7 +15,7 @@ import ContactPage from "./components/ContactPage"
 
 const App = () => {
   return (
-    <div className="font-monteserrat">
+    <div className="font-monteserrat bg-white">
       <div>
         <BrowserRouter>
             <NavBar />
